@@ -54,13 +54,14 @@ The learned policy effectively serves as a feedback controller for the bipedal s
 - GitHub: <https://github.com/Farama-Foundation/D4RL>
 
 **Option 2: Direct Acccess via Python**
+This code was ran in colab and worked. The conversion is a cleaner dataset and after this python 3.12 can be used for Deep Learning
 ```python
-import gym
-import d4rl
-
-env = gym.make("walker2d-medium-v2")
-dataset = env.get_dataset()
+!!pip install "numpy<2.0"
+!pip install "gym==0.23.1"
+!pip install d4rl
+!pip install robomimic
+!python convert_d4rl.py --env walker2d-medium-expert-v2
 ```
 The dataset was introduced by researchers at UC Berkeley as part of the D4RL benchmark for offline reinforcement learning.
 
-What is contained in the dataset can better be viewed at <https://www.tensorflow.org/datasets/catalog/d4rl_mujoco_walker2d>
+What is contained in the dataset can better be viewed at <https://www.tensorflow.org/datasets/catalog/d4rl_mujoco_walker2d>. The conversion is given by robotmimic which can be viewed at <https://robomimic.github.io/docs/datasets/d4rl.html>.
