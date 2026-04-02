@@ -56,11 +56,20 @@ The learned policy effectively serves as a feedback controller for the bipedal s
 **Option 2: Direct Acccess via Python**
 This code was ran in colab and worked. The conversion is a cleaner dataset and after this python 3.12 can be used for Deep Learning
 ```python
-!!pip install "numpy<2.0"
+!pip install "numpy<2.0"
 !pip install "gym==0.23.1"
 !pip install d4rl
 !pip install robomimic
 !python convert_d4rl.py --env walker2d-medium-expert-v2
+```
+
+Through the terminal:
+```bash
+# by default, download to robomimic/datasets
+$ python convert_d4rl.py --env walker2d-medium-expert-v2
+# download to specific folder
+$ python convert_d4rl.py --env walker2d-medium-expert-v2 --folder /path/to/output/folder/
+
 ```
 The dataset was introduced by researchers at UC Berkeley as part of the D4RL benchmark for offline reinforcement learning.
 
