@@ -1,5 +1,3 @@
-How to run: nohup ./IQL_impl.sh > training_log.out 2>&1 &
-
 ## Dataset names:
 The dataset is preprocessed as:
 
